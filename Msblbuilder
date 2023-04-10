@@ -46,27 +46,10 @@
       .dropdown:hover .dropbtn {
         background-color: #3e8e41;
       }
-      
-      /* Style the strength section */
-      .strength-section {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 70px;
-      }
 
-      .strength-title {
-        font-size: 24px;
-        margin-right: 10px;
-      }
-
-      .strength-box {
-        height: 40px;
-        width: 80px;
-        border: 2px solid black;
-        border-radius: 5px;
-        text-align: center;
-        font-size: 18px;
-        outline: none;
+      /* Highlight selected characters */
+      .selected {
+        background-color: lightblue;
       }
     </style>
   </head>
@@ -75,39 +58,24 @@
     <div class="dropdown">
       <button class="dropbtn">Character Selection</button>
       <div class="dropdown-content">
-        <a href="#">Mario</a>
-        <a href="#">Luigi</a>
-        <a href="#">Bowser</a>
-      </div>
-    </div>
-
-    <div class="strength-section">
-      <div>
-        <div class="strength-title">Strength</div>
-        <input type="number" min="1" max="25" class="strength-box" placeholder="Left">
-      </div>
-      <div>
-        <input type="number" min="1" max="25" class="strength-box" placeholder="Right">
+        <a href="#" class="character">Mario</a>
+        <a href="#" class="character">Luigi</a>
+        <a href="#" class="character">Bowser</a>
       </div>
     </div>
 
     <script>
-      // Character selection dropdown
-      const dropdown = document.querySelector('.dropdown');
-      const dropdownContent = document.querySelector('.dropdown-content');
-      const characterList = document.querySelectorAll('.dropdown-content a');
+      // Add click event listeners to all character links
+      const characterLinks = document.querySelectorAll(".character");
+      characterLinks.forEach(link => {
+        link.addEventListener("click", event => {
+          event.preventDefault();
+          link.classList.toggle("selected");
 
-      let selectedCharacters = [];
-
-      characterList.forEach(character => {
-        character.addEventListener('click', () => {
-          if (selectedCharacters.includes(character.textContent)) {
-            selectedCharacters = selectedCharacters.filter(char => char !== character.textContent);
-          } else {
-            selectedCharacters.push(character.textContent);
-          }
-          dropdown.querySelector('span').textContent = selectedCharacters.length;
-          character.classList.toggle('selected');
+          // Update button text with number of selected characters
+          const selectedCharacters = document.querySelectorAll(".selected");
+          const buttonText = selectedCharacters.length + " selected";
+          document.querySelector(".dropbtn").textContent = buttonText;
         });
       });
     </script>
