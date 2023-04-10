@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -48,37 +47,27 @@
         background-color: #3e8e41;
       }
 
-      /* Highlight selected character names */
-      .dropdown-content .selected {
-        background-color: #ADD8E6;
+      /* Highlight selected items */
+      .dropdown-content a.selected {
+        background-color: #0074D9;
+        color: #FFF;
+      }
+
+      /* Display number of selected items */
+      .dropdown .num-selected {
+        font-size: 14px;
+        color: #777;
+        display: none;
+        position: absolute;
+        top: 25px;
+        right: 10px;
+      }
+
+      /* Show number of selected items when at least one item is selected */
+      .dropdown.has-selected .num-selected {
+        display: block;
       }
     </style>
-    <script>
-      // Get the button and dropdown content elements
-      var button = document.getElementsByClassName("dropbtn")[0];
-      var dropdownContent = document.getElementsByClassName("dropdown-content")[0];
-
-      // Get all the character names in the dropdown content
-      var characterNames = dropdownContent.getElementsByTagName("a");
-
-      // Add an onclick event listener to each character name
-      for (var i = 0; i < characterNames.length; i++) {
-        characterNames[i].addEventListener("click", function() {
-          // Toggle the "selected" class to highlight/unhighlight the character name
-          this.classList.toggle("selected");
-
-          // Update the button text with the number of selected characters
-          var selectedNames = dropdownContent.getElementsByClassName("selected");
-          if (selectedNames.length == 0) {
-            button.innerHTML = "Character Selection";
-          } else if (selectedNames.length == 1) {
-            button.innerHTML = selectedNames[0].innerHTML;
-          } else {
-            button.innerHTML = selectedNames.length + " characters selected";
-          }
-        });
-      }
-    </script>
   </head>
   <body>
 
@@ -89,7 +78,38 @@
         <a href="#">Luigi</a>
         <a href="#">Bowser</a>
       </div>
+      <div class="num-selected"></div>
     </div>
+
+    <script>
+      // Get the dropdown and links
+      var dropdown = document.querySelector('.dropdown');
+      var links = dropdown.querySelectorAll('.dropdown-content a');
+
+      // Initialize selected array
+      var selected = [];
+
+      // Add event listeners to links
+      for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener('click', function(event) {
+          event.preventDefault();
+
+          // Toggle selected class
+          if (this.classList.contains('selected')) {
+            this.classList.remove('selected');
+            selected.splice(selected.indexOf(this.innerHTML), 1);
+          } else {
+            this.classList.add('selected');
+            selected.push(this.innerHTML);
+          }
+
+          // Update number of selected items
+          var numSelected = dropdown.querySelector('.num-selected');
+          numSelected.innerHTML = selected.length + ' selected';
+          dropdown.classList.toggle('has-selected', selected.length > 0);
+        });
+      }
+    </script>
 
   </body>
 </html>
