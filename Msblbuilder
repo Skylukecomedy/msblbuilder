@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -47,76 +48,48 @@
         background-color: #3e8e41;
       }
 
-      /* Highlight selected character name in blue */
-      .selected {
-        background-color: blue;
-        color: white;
+      /* Highlight selected character names */
+      .dropdown-content .selected {
+        background-color: #ADD8E6;
       }
-
     </style>
+    <script>
+      // Get the button and dropdown content elements
+      var button = document.getElementsByClassName("dropbtn")[0];
+      var dropdownContent = document.getElementsByClassName("dropdown-content")[0];
+
+      // Get all the character names in the dropdown content
+      var characterNames = dropdownContent.getElementsByTagName("a");
+
+      // Add an onclick event listener to each character name
+      for (var i = 0; i < characterNames.length; i++) {
+        characterNames[i].addEventListener("click", function() {
+          // Toggle the "selected" class to highlight/unhighlight the character name
+          this.classList.toggle("selected");
+
+          // Update the button text with the number of selected characters
+          var selectedNames = dropdownContent.getElementsByClassName("selected");
+          if (selectedNames.length == 0) {
+            button.innerHTML = "Character Selection";
+          } else if (selectedNames.length == 1) {
+            button.innerHTML = selectedNames[0].innerHTML;
+          } else {
+            button.innerHTML = selectedNames.length + " characters selected";
+          }
+        });
+      }
+    </script>
   </head>
   <body>
 
     <div class="dropdown">
       <button class="dropbtn">Character Selection</button>
       <div class="dropdown-content">
-        <a href="#" id="mario">Mario</a>
-        <a href="#" id="luigi">Luigi</a>
-        <a href="#" id="bowser">Bowser</a>
+        <a href="#">Mario</a>
+        <a href="#">Luigi</a>
+        <a href="#">Bowser</a>
       </div>
     </div>
 
-    <script>
-      var selected = [];
-
-      // Function to update selected characters and button text
-      function updateSelected() {
-        // Update button text with number of selected characters
-        var button = document.querySelector(".dropbtn");
-        if (selected.length == 0) {
-          button.textContent = "Character Selection";
-        } else if (selected.length == 1) {
-          button.textContent = selected[0];
-        } else {
-          button.textContent = selected.length + " characters selected";
-        }
-
-        // Highlight selected character names
-        var links = document.querySelectorAll(".dropdown-content a");
-        links.forEach(function(link) {
-          if (selected.includes(link.textContent)) {
-            link.classList.add("selected");
-          } else {
-            link.classList.remove("selected");
-          }
-        });
-      }
-
-      // Add event listeners to character links
-      var mario = document.getElementById("mario");
-      var luigi = document.getElementById("luigi");
-      var bowser = document.getElementById("bowser");
-
-      mario.addEventListener("click", function(event) {
-        event.preventDefault();
-        if (selected.includes("Mario")) {
-          selected.splice(selected.indexOf("Mario"), 1);
-        } else {
-          selected.push("Mario");
-        }
-        updateSelected();
-      });
-
-      luigi.addEventListener("click", function(event) {
-        event.preventDefault();
-        if (selected.includes("Luigi")) {
-          selected.splice(selected.indexOf("Luigi"), 1);
-        } else {
-          selected.push("Luigi");
-        }
-        updateSelected();
-      });
-
-      bowser.addEventListener("click", function(event) {
-        event.preventDefault();
-        if (
+  </body>
+</html>
