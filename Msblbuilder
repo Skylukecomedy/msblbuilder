@@ -4,11 +4,15 @@
     <title>My Website</title>
     <style>
       body {
-       background-color: #FF5733 !important;
+        background-color: #FFE5B4;
+      }
+      h1 {
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <h1>Welcome to my website!</h1>
+    <h1>TESTING</h1>
+    <h2>Welcome to my website!</h2>
   </body>
 </html>
