@@ -46,10 +46,27 @@
       .dropdown:hover .dropbtn {
         background-color: #3e8e41;
       }
+      
+      /* Style the strength section */
+      .strength-section {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+      }
 
-      /* Highlight selected characters */
-      .selected {
-        background-color: lightblue;
+      .strength-title {
+        font-size: 24px;
+        margin-right: 10px;
+      }
+
+      .strength-box {
+        height: 40px;
+        width: 80px;
+        border: 2px solid black;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 18px;
+        outline: none;
       }
     </style>
   </head>
@@ -58,27 +75,21 @@
     <div class="dropdown">
       <button class="dropbtn">Character Selection</button>
       <div class="dropdown-content">
-        <a href="#" class="character">Mario</a>
-        <a href="#" class="character">Luigi</a>
-        <a href="#" class="character">Bowser</a>
+        <a href="#">Mario</a>
+        <a href="#">Luigi</a>
+        <a href="#">Bowser</a>
       </div>
     </div>
 
-    <script>
-      // Add click event listeners to all character links
-      const characterLinks = document.querySelectorAll(".character");
-      characterLinks.forEach(link => {
-        link.addEventListener("click", event => {
-          event.preventDefault();
-          link.classList.toggle("selected");
-
-          // Update button text with number of selected characters
-          const selectedCharacters = document.querySelectorAll(".selected");
-          const buttonText = selectedCharacters.length + " selected";
-          document.querySelector(".dropbtn").textContent = buttonText;
-        });
-      });
-    </script>
+    <div class="strength-section">
+      <div>
+        <div class="strength-title">Strength</div>
+        <input type="number" min="1" max="25" class="strength-box" placeholder="Left">
+      </div>
+      <div>
+        <input type="number" min="1" max="25" class="strength-box" placeholder="Right">
+      </div>
+    </div>
 
   </body>
 </html>
