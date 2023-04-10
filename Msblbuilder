@@ -47,43 +47,21 @@
         background-color: #3e8e41;
       }
 
-      /* Style the input sections */
-      .input-container {
+      /* Style the strength input section */
+      .strength-container {
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 50px;
       }
 
-      .attribute-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 20px;
-      }
-
-      .attribute-title {
-        font-size: 16px;
-        margin-bottom: 5px;
-      }
-
-      .attribute-boxes {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border: 1px solid black;
-        border-radius: 5px;
-        padding: 5px;
-        width: 100px;
-        height: 30px;
-      }
-
-      .attribute-boxes input {
+      .strength-input {
         border: none;
-        width: 40px;
+        font-size: 16px;
         text-align: center;
+        margin: 0 10px;
       }
 
-      .attribute-boxes input:focus {
+      .strength-input:focus {
         outline: none;
       }
     </style>
@@ -99,19 +77,30 @@
       </div>
     </div>
 
-    <div class="input-container">
-      <div class="attribute-container">
-        <h2 class="attribute-title">Strength</h2>
-        <div class="attribute-boxes">
-          <input type="number" min="1" max="25" placeholder="Left box">
-          <input type="number" min="1" max="25" placeholder="Right box">
-        </div>
-      </div>
-      <div class="attribute-container">
-        <h2 class="attribute-title">Speed</h2>
-        <div class="attribute-boxes">
-          <input type="number" min="1" max="25" placeholder="Left box">
-          <input type="number" min="1" max="25" placeholder="Right box">
-        </div>
-      </div>
-      <div class="attribute
+    <div class="strength-container">
+      <input type="number" class="strength-input" min="1" max="25" placeholder="Left box">
+      <h2 style="margin: 0 10px;">Strength</h2>
+      <input type="number" class="strength-input" min="1" max="25" placeholder="Right box">
+    </div>
+
+    <script>
+      const characterSelectionBtn = document.getElementById("character-selection");
+      const characterNames = document.querySelectorAll(".character-name");
+
+      let selectedCharacters = [];
+
+      characterNames.forEach(name => {
+        name.addEventListener("click", () => {
+          if (!selectedCharacters.includes(name.innerText)) {
+            selectedCharacters.push(name.innerText);
+          } else {
+            selectedCharacters.splice(selectedCharacters.indexOf(name.innerText), 1);
+          }
+
+          characterSelectionBtn.innerText = `Character Selection (${selectedCharacters.length})`;
+        });
+      });
+    </script>
+
+  </body>
+</html>
