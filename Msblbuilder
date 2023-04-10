@@ -91,5 +91,26 @@
       </div>
     </div>
 
+    <script>
+      // Character selection dropdown
+      const dropdown = document.querySelector('.dropdown');
+      const dropdownContent = document.querySelector('.dropdown-content');
+      const characterList = document.querySelectorAll('.dropdown-content a');
+
+      let selectedCharacters = [];
+
+      characterList.forEach(character => {
+        character.addEventListener('click', () => {
+          if (selectedCharacters.includes(character.textContent)) {
+            selectedCharacters = selectedCharacters.filter(char => char !== character.textContent);
+          } else {
+            selectedCharacters.push(character.textContent);
+          }
+          dropdown.querySelector('span').textContent = selectedCharacters.length;
+          character.classList.toggle('selected');
+        });
+      });
+    </script>
+
   </body>
 </html>
