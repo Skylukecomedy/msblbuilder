@@ -46,6 +46,24 @@
       .dropdown:hover .dropbtn {
         background-color: #3e8e41;
       }
+      
+      /* Style the check mark */
+      .checkmark {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+      }
+      
+      /* Style the selected character box */
+      .selected-characters {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 150px;
+        font-size: 16px;
+        color: white;
+      }
     </style>
   </head>
   <body>
@@ -53,11 +71,42 @@
     <div class="dropdown">
       <button class="dropbtn">Character Selection</button>
       <div class="dropdown-content">
-        <a href="#">Mario</a>
-        <a href="#">Luigi</a>
-        <a href="#">Bowser</a>
+        <a href="#" onclick="toggleCheck('mario')">Mario<span id="mario-check" class="checkmark"></span></a>
+        <a href="#" onclick="toggleCheck('luigi')">Luigi<span id="luigi-check" class="checkmark"></span></a>
+        <a href="#" onclick="toggleCheck('bowser')">Bowser<span id="bowser-check" class="checkmark"></span></a>
       </div>
+      <div class="selected-characters" id="selected-characters"></div>
     </div>
 
-  </body>
-</html>
+    <script>
+      // Initialize selected characters array
+      var selectedCharacters = [];
+
+      function toggleCheck(characterName) {
+        // Get the checkmark element for this character
+        var checkmark = document.getElementById(characterName + "-check");
+        // Toggle the checkmark
+        checkmark.innerHTML = checkmark.innerHTML == "&check;" ? "" : "&#10003;";
+        
+        // Add or remove the character from the selected characters array
+        if (selectedCharacters.includes(characterName)) {
+          selectedCharacters.splice(selectedCharacters.indexOf(characterName), 1);
+        } else {
+          selectedCharacters.push(characterName);
+        }
+        
+        // Update the selected characters box
+        var selectedCharactersBox = document.getElementById("selected-characters");
+        if (selectedCharacters.length > 0) {
+          selectedCharactersBox.innerHTML = selectedCharacters.length + " selected";
+        } else {
+          selectedCharactersBox.innerHTML = "";
+        }
+        
+        // Hide the dropdown
+        var dropdownContent = document.querySelector(".dropdown-content");
+        dropdownContent.style.display = "none";
+      }
+    </script>
+
+  </body
