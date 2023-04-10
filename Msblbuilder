@@ -47,25 +47,9 @@
         background-color: #3e8e41;
       }
 
-      /* Highlight selected items */
-      .dropdown-content a.selected {
-        background-color: #0074D9;
-        color: #FFF;
-      }
-
-      /* Display number of selected items */
-      .dropdown .num-selected {
-        font-size: 14px;
-        color: #777;
-        display: none;
-        position: absolute;
-        top: 25px;
-        right: 10px;
-      }
-
-      /* Show number of selected items when at least one item is selected */
-      .dropdown.has-selected .num-selected {
-        display: block;
+      /* Highlight selected characters */
+      .selected {
+        background-color: lightblue;
       }
     </style>
   </head>
@@ -74,41 +58,26 @@
     <div class="dropdown">
       <button class="dropbtn">Character Selection</button>
       <div class="dropdown-content">
-        <a href="#">Mario</a>
-        <a href="#">Luigi</a>
-        <a href="#">Bowser</a>
+        <a href="#" class="character">Mario</a>
+        <a href="#" class="character">Luigi</a>
+        <a href="#" class="character">Bowser</a>
       </div>
-      <div class="num-selected"></div>
     </div>
 
     <script>
-      // Get the dropdown and links
-      var dropdown = document.querySelector('.dropdown');
-      var links = dropdown.querySelectorAll('.dropdown-content a');
-
-      // Initialize selected array
-      var selected = [];
-
-      // Add event listeners to links
-      for (var i = 0; i < links.length; i++) {
-        links[i].addEventListener('click', function(event) {
+      // Add click event listeners to all character links
+      const characterLinks = document.querySelectorAll(".character");
+      characterLinks.forEach(link => {
+        link.addEventListener("click", event => {
           event.preventDefault();
+          link.classList.toggle("selected");
 
-          // Toggle selected class
-          if (this.classList.contains('selected')) {
-            this.classList.remove('selected');
-            selected.splice(selected.indexOf(this.innerHTML), 1);
-          } else {
-            this.classList.add('selected');
-            selected.push(this.innerHTML);
-          }
-
-          // Update number of selected items
-          var numSelected = dropdown.querySelector('.num-selected');
-          numSelected.innerHTML = selected.length + ' selected';
-          dropdown.classList.toggle('has-selected', selected.length > 0);
+          // Update button text with number of selected characters
+          const selectedCharacters = document.querySelectorAll(".selected");
+          const buttonText = selectedCharacters.length + " selected";
+          document.querySelector(".dropbtn").textContent = buttonText;
         });
-      }
+      });
     </script>
 
   </body>
