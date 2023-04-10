@@ -32,12 +32,6 @@
         display: block;
       }
 
-      /* Highlight the selected character in blue */
-      .dropdown-content a.selected {
-        background-color: blue;
-        color: white;
-      }
-
       /* Change color of dropdown links on hover */
       .dropdown-content a:hover {
         background-color: #f1f1f1;
@@ -52,6 +46,13 @@
       .dropdown:hover .dropbtn {
         background-color: #3e8e41;
       }
+
+      /* Highlight selected character name in blue */
+      .selected {
+        background-color: blue;
+        color: white;
+      }
+
     </style>
   </head>
   <body>
@@ -59,34 +60,63 @@
     <div class="dropdown">
       <button class="dropbtn">Character Selection</button>
       <div class="dropdown-content">
-        <a href="#" onclick="selectCharacter('Mario')">Mario</a>
-        <a href="#" onclick="selectCharacter('Luigi')">Luigi</a>
-        <a href="#" onclick="selectCharacter('Bowser')">Bowser</a>
+        <a href="#" id="mario">Mario</a>
+        <a href="#" id="luigi">Luigi</a>
+        <a href="#" id="bowser">Bowser</a>
       </div>
     </div>
 
     <script>
-      var selectedCharacters = [];
+      var selected = [];
 
-      function selectCharacter(character) {
-        var characterLink = document.querySelector('.dropdown-content a[href="#"][onclick*="' + character + '"]');
-        if (selectedCharacters.includes(character)) {
-          characterLink.classList.remove('selected');
-          selectedCharacters.splice(selectedCharacters.indexOf(character), 1);
+      // Function to update selected characters and button text
+      function updateSelected() {
+        // Update button text with number of selected characters
+        var button = document.querySelector(".dropbtn");
+        if (selected.length == 0) {
+          button.textContent = "Character Selection";
+        } else if (selected.length == 1) {
+          button.textContent = selected[0];
         } else {
-          characterLink.classList.add('selected');
-          selectedCharacters.push(character);
+          button.textContent = selected.length + " characters selected";
         }
-        var selectionText = selectedCharacters.length + " characters selected";
-        if (selectedCharacters.length === 0) {
-          selectionText = "Character Selection";
-        } else if (selectedCharacters.length === 1) {
-          selectionText = selectedCharacters[0];
-        }
-        document.querySelector('.dropdown .dropbtn').textContent = selectionText;
-        document.querySelector('.dropdown-content').style.display = 'none';
-      }
-    </script>
 
-  </body>
-</html>
+        // Highlight selected character names
+        var links = document.querySelectorAll(".dropdown-content a");
+        links.forEach(function(link) {
+          if (selected.includes(link.textContent)) {
+            link.classList.add("selected");
+          } else {
+            link.classList.remove("selected");
+          }
+        });
+      }
+
+      // Add event listeners to character links
+      var mario = document.getElementById("mario");
+      var luigi = document.getElementById("luigi");
+      var bowser = document.getElementById("bowser");
+
+      mario.addEventListener("click", function(event) {
+        event.preventDefault();
+        if (selected.includes("Mario")) {
+          selected.splice(selected.indexOf("Mario"), 1);
+        } else {
+          selected.push("Mario");
+        }
+        updateSelected();
+      });
+
+      luigi.addEventListener("click", function(event) {
+        event.preventDefault();
+        if (selected.includes("Luigi")) {
+          selected.splice(selected.indexOf("Luigi"), 1);
+        } else {
+          selected.push("Luigi");
+        }
+        updateSelected();
+      });
+
+      bowser.addEventListener("click", function(event) {
+        event.preventDefault();
+        if (
