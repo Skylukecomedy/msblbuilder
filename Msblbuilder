@@ -34,6 +34,36 @@ let bowserJr = { strength: 13, speed: 13, shooting: 11, passing: 17, technique: 
 
 let birdo = { strength: 9, speed: 10, shooting: 18, passing: 9, technique: 17 };
 
+// Define an object for each item with their respective stats
+const items = {
+  head: [
+    {name: 'Muscle Helmet', id: 1, stats: {strength: 2, technique: -2}},
+    {name: 'Turbo Helmet', id: 2, stats: {speed: 2, technique: -2}},
+    {name: 'Cannon Visor', id: 3, stats: {shooting: 2, technique: -2}},
+    {name: 'Chain Helmet', id: 4, stats: {passing: 2, speed: -2}},
+    {name: 'Trick Helmet', id: 5, stats: {technique: 2, passing: -2}},
+    {name: 'Bushido Helmet', id: 6, stats: {passing: 4, strength: -1, speed: -1, shooting: -1, technique: -1}},
+    {name: 'Knight helmet', id: 7, stats: {strength: 2, shooting: 1, passing: 1, speed: -2, technique: -2}},
+    {name: 'Barrel helmet', id: 8, stats: {shooting: 2, passing: 1, speed: 1, strength: -2, technique: -2}},
+    {name: 'Shellfish helmet', id: 9, stats: {speed: 2, technique: 2, strength: -2, shooting: -1, passing: -1}},
+  ],
+  arms: [
+    {name: 'Muscle Gauntlets', id: 1, stats: {strength: 2, passing: -2}},
+    {name: 'Turbo Gloves', id: 2, stats: {speed: 2, strength: -2}},
+    {name: 'Cannon Gloves', id: 3, stats: {shooting: 2, speed: -2}},
+    {name: 'Chain Gauntlets', id: 4, stats: {passing: 2, shooting: -2}},
+    {name: 'Trick Gloves', id: 5, stats: {technique: 2, speed: -2}},
+    {name: 'Bushido Bracers', id: 6, stats: {technique: 4, strength: -1, speed: -1, shooting: -1, passing: -1}},
+    {name: 'Knight gauntlets', id: 7, stats: {strength: 2, shooting: 1, speed: 1, passing: -2, technique: -2}},
+    {name: 'Barrel gauntlets', id: 8, stats: {shooting: 2, technique: 1, passing: 1, strength: -2, speed: -2}},
+    {name: 'Shellfish gauntlets', id: 9, stats: {speed: 2, strength: 1, technique: 1, shooting: -2, passing: -2}},
+  ],
+  body: [
+    {name: 'Muscle Chest', id: 1, stats: {strength: 2, shooting: -2}},
+    {name: 'Turbo Pad', id: 2, stats: {speed: 2, passing: -2}},
+    {name: 'Cannon Plate', id: 3, stats: {shooting: 2, strength
+
+
 
 </script>
     <title>MSBL Character Selector</title>
