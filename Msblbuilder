@@ -17,94 +17,35 @@
         right: 0;
       }
 
-      /* Style the dropdown content */
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        z-index: 1;
-      }
+  /* Style the dropdown content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
 
-      /* Style the links inside the dropdown */
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
 
-      /* Change color of dropdown links on hover */
-      .dropdown-content a:hover {
-        background-color: #f1f1f1;
-      }
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
 
-      /* Show the dropdown menu on hover */
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
-      /* Change the background color of the dropdown button when the dropdown content is shown */
-      .dropdown:hover .dropbtn {
-        background-color: #3e8e41;
-      }
-
-      /* Style the selected character count */
-      .selected-count {
-        display: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #4CAF50;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-      }
-
-      /* Show the selected character count when at least one character is selected */
-      .dropdown.selected .selected-count {
-        display: block;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="dropdown">
-      <button class="dropbtn">Character Selection</button>
-      <div class="dropdown-content">
-        <a href="#" class="character-link">Character 1</a>
-        <a href="#" class="character-link">Character 2</a>
-        <a href="#" class="character-link">Character 3</a>
-        <a href="#" class="character-link">Character 4</a>
-        <a href="#" class="character-link">Character 5</a>
-      </div>
-      <div class="selected-count">0 Characters Selected</div>
-    </div>
-    <script>
-      const characterLinks = document.querySelectorAll('.character-link');
-      const selectedCount = document.querySelector('.selected-count');
-
-      let selectedCharacters = 0;
-
-      characterLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-          event.preventDefault();
-          if (!link.classList.contains('selected')) {
-            link.classList.add('selected');
-            selectedCharacters++;
-          } else {
-            link.classList.remove('selected');
-            selectedCharacters--;
-          }
-          selectedCount.textContent = `${selectedCharacters} Characters Selected`;
-          if (selectedCharacters === 0) {
-            document.querySelector('.dropdown').classList.remove('selected');
-          } else {
-            document.querySelector('.dropdown').classList.add('selected');
-          }
-        });
-      });
-    </script>
-  </body>
-</html>
-
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
 
   /* Style the strength, speed, shooting, passing, and technique input sections */
   .input-container {
