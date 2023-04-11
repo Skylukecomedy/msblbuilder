@@ -113,27 +113,27 @@
 </div>
 
 <div class="input-container">
-  <input type="number" class="input-box" min="1" max="25" placeholder="Left box">
+  <input type="number" class="input-box" min="1" max="25" placeholder="Left box" name="speed-left">
   <h2 style="margin: 0 10px;">Speed</h2>
-  <input type="number" class="input-box" min="1" max="25" placeholder="Right box">
+  <input type="number" class="input-box" min="1" max="25" placeholder="Right box" name="speed-right">
 </div>
 
 <div class="input-container">
-  <input type="number" class="input-box" min="1" max="25" placeholder="Left box">
+  <input type="number" class="input-box" min="1" max="25" placeholder="Left box" name="shooting-left">
   <h2 style="margin: 0 10px;">Shooting</h2>
-  <input type="number" class="input-box" min="1" max="25" placeholder="Right box">
+  <input type="number" class="input-box" min="1" max="25" placeholder="Right box" name=shooting-right">
 </div>
 
 <div class="input-container">
-  <input type="number" class="input-box" min="1" max="25" placeholder="Left box">
+  <input type="number" class="input-box" min="1" max="25" placeholder="Left box" name="passing-left">
   <h2 style="margin: 0 10px;">Passing</h2>
-  <input type="number" class="input-box" min="1" max="25" placeholder="Right box">
+  <input type="number" class="input-box" min="1" max="25" placeholder="Right box" name="passing-right">
 </div>
 
 <div class="input-container">
-  <input type="number" class="input-box" min="1" max="25" placeholder="Left box">
+  <input type="number" class="input-box" min="1" max="25" placeholder="Left box" name="technique-left">
   <h2 style="margin: 0 10px;">Technique</h2>
-  <input type="number" class="input-box" min="1" max="25" placeholder="Right box">
+  <input type="number" class="input-box" min="1" max="25" placeholder="Right box" name="technique-right">
 </div>
 
 
