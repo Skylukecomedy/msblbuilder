@@ -108,3 +108,24 @@
   <input type="number" class="input-box" min="1" max="25" placeholder="Right box">
 </div>
 
+// get a reference to the character selection button
+const characterSelectionButton = document.getElementById('character-selection');
+
+// get references to all the character name links
+const characterNameLinks = document.querySelectorAll('.character-name');
+
+// initialize the character count to 0
+let characterCount = 0;
+
+// add a click event listener to each character name link
+characterNameLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // increment the character count
+    characterCount++;
+
+    // update the text of the character selection button
+    characterSelectionButton.textContent = `Characters Selected: ${characterCount}`;
+  });
+});
+
+
