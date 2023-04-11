@@ -17,81 +17,81 @@
         right: 0;
       }
 
-      /* Style the dropdown content */
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        z-index: 1;
-      }
+  /* Style the dropdown content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
 
-      /* Style the links inside the dropdown */
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
 
-      /* Change color of dropdown links on hover */
-      .dropdown-content a:hover {
-        background-color: #f1f1f1;
-      }
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
 
-      /* Show the dropdown menu on hover */
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
-      /* Change the background color of the dropdown button when the dropdown content is shown */
-      .dropdown:hover .dropbtn {
-        background-color: #3e8e41;
-      }
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
 
-      /* Style the strength, speed, shooting, passing, and technique input sections */
-      .input-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 50px;
-      }
+  /* Style the strength, speed, shooting, passing, and technique input sections */
+  .input-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
 
-      .input-box {
-        border: none;
-        font-size: 16px;
-        text-align: center;
-        margin: 0 10px;
-      }
+  .input-box {
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    margin: 0 10px;
+  }
 
-      .input-box:focus {
-        outline: none;
-      }
-    </style>
-  </head>
+  .input-box:focus {
+    outline: none;
+  }
+</style>
+
+</head>
   <body>
 
-    <div class="dropdown">
-      <button class="dropbtn" id="character-selection">Character Selection</button>
-      <div class="dropdown-content">
-        <a href="#" class="character-name">Mario</a>
-        <a href="#" class="character-name">Luigi</a>
-        <a href="#" class="character-name">Bowser</a>
-      </div>
-    </div>
+<div class="dropdown">
+  <button class="dropbtn" id="character-selection">Character Selection</button>
+  <div class="dropdown-content">
+    <a href="#" class="character-name">Mario</a>
+    <a href="#" class="character-name">Luigi</a>
+    <a href="#" class="character-name">Bowser</a>
+  </div>
+</div>
 
-    <div class="input-container">
-      <input type="number" class="input-box" min="1" max="25" placeholder="Left box">
-      <h2 style="margin: 0 10px;">Strength</h2>
-      <input type="number" class="input-box" min="1" max="25" placeholder="Right box">
-    </div>
+<div class="input-container">
+  <input type="number" class="input-box" min="1" max="25" placeholder="Left box">
+  <h2 style="margin: 0 10px;">Strength</h2>
+  <input type="number" class="input-box" min="1" max="25" placeholder="Right box">
+</div>
 
-    <div class="input-container">
-      <input type="number" class="input-box" min="1" max="25" placeholder="Left box">
-      <h2 style="margin: 0 10px;">Speed</h2>
-      <input type="number" class="input-box" min="1" max="25" placeholder="Right box">
-    </div>
+<div class="input-container">
+  <input type="number" class="input-box" min="1" max="25" placeholder="Left box">
+  <h2 style="margin: 0 10px;">Speed</h2>
+  <input type="number" class="input-box" min="1" max="25" placeholder="Right box">
+</div>
 
-    <div class="input-container">
-      <input type="number" class="input-box" min="1" max="25" placeholder="Left box">
-      <h2 style="margin: 0 10px;">Shooting</h2>
-      <input type="number" class="input-box" min="1" max="25" placeholder="Right box">
-      <input type="number" class="input-box" min="1" max="25" placeholder="Middle box">
-    </div
+<div class="input-container">
+  <input type="number" class="input-box" min="1" max="25" placeholder="Left box">
+  <h2 style="margin: 0 10px;">Shooting</h2>
+  <input type="number" class="input-box" min="1" max="25" placeholder="
+
