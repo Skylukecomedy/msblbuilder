@@ -157,3 +157,8 @@
 <div class="filter-box">
   <a href="#" class="filter-link">Filter</a>
 </div>
+
+<div class="result-box">
+  <h2>Results</h2>
+</div>
+
