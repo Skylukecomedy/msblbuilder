@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+
+<script> let mario = { strength: 11, speed: 12, shooting: 14, passing: 10, technique: 16 
+}; 
+</script>
     <title>MSBL Character Selector</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
