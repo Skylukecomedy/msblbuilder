@@ -221,7 +221,7 @@ const items = {
 
 
 
-  <body>
+ 
 
 <div class="dropdown">
   <button class="dropbtn" id="character-selection">Character Selection</button>
