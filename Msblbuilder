@@ -122,6 +122,18 @@ document.getElementById('filter-button').addEventListener('click', filterItems);
 
 
 
+const resultContainer = document.getElementById('result-container');
+resultContainer.innerHTML = ''; // Clear previous contents
+
+if (filteredItems.length === 0) {
+  resultContainer.innerHTML = 'No items found';
+} else {
+  filteredItems.forEach(item => {
+    const listItem = document.createElement('li');
+    listItem.innerHTML = item.name;
+    resultContainer.appendChild(listItem);
+  });
+}
 
 
 </script>
@@ -282,5 +294,6 @@ document.getElementById('filter-button').addEventListener('click', filterItems);
   <a href="#" class="filter-link">Filter</a>
 </div>
 
+<div id="result-container"></div>
 
 
