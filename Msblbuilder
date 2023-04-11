@@ -17,35 +17,35 @@
         right: 0;
       }
 
-  /* Style the dropdown content */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    z-index: 1;
-  }
+      /* Style the dropdown content */
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        z-index: 1;
+      }
 
-  /* Style the links inside the dropdown */
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
+      /* Style the links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
 
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
-  }
+      /* Change color of dropdown links on hover */
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
 
-  /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
 
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-  }
+      /* Change the background color of the dropdown button when the dropdown content is shown */
+      .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+      }
 
   /* Style the strength, speed, shooting, passing, and technique input sections */
   .input-container {
