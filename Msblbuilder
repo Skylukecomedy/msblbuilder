@@ -47,318 +47,50 @@
         background-color: #3e8e41;
       }
 
-      /* Style the strength input section */
-      .strength-container {
+      /* Style the strength, speed, shooting, passing, and technique input sections */
+      .input-container {
         display: flex;
         justify-content: center;
         margin-top: 50px;
       }
 
-      .strength-input {
+      .input-box {
         border: none;
         font-size: 16px;
         text-align: center;
         margin: 0 10px;
       }
 
-      .strength-input:focus {
+      .input-box:focus {
         outline: none;
-      }
-
-      /* Style the speed input section */
-      .speed-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 50px;
-      }
-
-      .speed-input {
-        border: none;
-        font-size: 16px;
-        text-align: center;
-        margin: 0 10px;
-      }
-
-      .speed-input:focus {
-        outline: none;
-      }
-
-      /* Style the shooting input section */
-      .shooting-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 50px;
-      }
-
-      .shooting-header {
-        margin: 0 20px;
-        font-size: 24px;
-        font-weight: bold;
-      }
-
-      .shooting-input-left {
-        border: none;
-        font-size: 16px;
-        text-align: center;
-        margin-right: 10px;
-      }
-
-      .shooting-input-left:focus {
-        outline: none;
-      }
-
-      .shooting-input-right {
-        border: none;
-        font-size: 16px;
-        text-align: center;
-        margin-left: 10px;
-      }
-
-      .shooting-input-right:focus {
-        outline: none;
-      }
-
-      /* Style the passing input section */
-      .passing-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 50px;
-      }
-
-      .passing-header {
-        margin: 0 20px;
-        font-size: 24px;
-        font-weight: bold;
-      }
-
-      .passing-input-left {
-        border: none;
-        font-size: 16px;
-        text-align: center;
-        margin-right: 10px;
-      }
-
-      .passing-input-left:focus {
-        outline: none;
-      }
-
-      .passing-input-right {
-        border: none;
-        font-size: 16px;
-        text-align: center;
-        margin-left: 10px;
-}
-
-.passing-input-right:focus {
-  outline: none;
-}
-
-/* Style the technique input section */
-.technique-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.technique-input-left {
-  border: none;
-  font-size: 16px;
-  text-align: center;
-  margin-right: 10px;
-}
-
-.technique-input-left:focus {
-  outline: none;
-}
-
-.technique-input-right {
-  border: none;
-  font-size: 16px;
-  text-align: center;
-  margin-left: 10px;
-}
-
-.technique-input-right:focus {
-  outline: none;
-}
-
-/* Style the submit button */
-.submit-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  margin-top: 50px;
-}
-
-.submit-button:hover {
-  background-color: #3e8e41;
-}
-
-/* Style the reset button */
-.reset-button {
-  background-color: #f44336;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  margin-top: 50px;
-}
-
-.reset-button:hover {
-  background-color: #d32f2f;
-}
-
-/* Style the output container */
-.output-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.output-text {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.output-image {
-  width: 300px;
-  height: auto;
-}
-
-      .technique-input-left {
-        border: none;
-        font-size: 16px;
-        text-align: center;
-        margin-right: 10px;
-      }
-
-      .technique-input-left:focus {
-        outline: none;
-      }
-
-      .technique-input-right {
-        border: none;
-        font-size: 16px;
-        text-align: center;
-        margin-left: 10px;
-      }
-
-      .technique-input-right:focus {
-        outline: none;
-      }
-
-      /* Style the output image */
-      .output-image {
-        max-width: 100%;
-        max-height: 300px;
-        margin: 50px auto;
-        display: block;
       }
     </style>
   </head>
   <body>
+
     <div class="dropdown">
-      <button class="dropbtn">Select Character</button>
+      <button class="dropbtn" id="character-selection">Character Selection</button>
       <div class="dropdown-content">
-        <a href="#" onclick="selectCharacter('mario')">Mario</a>
-        <a href="#" onclick="selectCharacter('luigi')">Luigi</a>
-        <a href="#" onclick="selectCharacter('peach')">Peach</a>
-        <a href="#" onclick="selectCharacter('bowser')">Bowser</a>
+        <a href="#" class="character-name">Mario</a>
+        <a href="#" class="character-name">Luigi</a>
+        <a href="#" class="character-name">Bowser</a>
       </div>
     </div>
 
-    <div class="strength-container">
-      <div>
-        <h2>Strength</h2>
-        <input type="range" min="0" max="10" value="5" class="strength-input" id="strength-input" oninput="generateImage()" />
-      </div>
+    <div class="input-container">
+      <input type="number" class="input-box" min="1" max="25" placeholder="Left box">
+      <h2 style="margin: 0 10px;">Strength</h2>
+      <input type="number" class="input-box" min="1" max="25" placeholder="Right box">
     </div>
 
-    <div class="speed-container">
-      <div>
-        <h2>Speed</h2>
-        <input type="range" min="0" max="10" value="5" class="speed-input" id="speed-input" oninput="generateImage()" />
-      </div>
+    <div class="input-container">
+      <input type="number" class="input-box" min="1" max="25" placeholder="Left box">
+      <h2 style="margin: 0 10px;">Speed</h2>
+      <input type="number" class="input-box" min="1" max="25" placeholder="Right box">
     </div>
 
-    <div class="shooting-container">
-      <div>
-        <h2>Shooting</h2>
-        <input type="range" min="0" max="10" value="5" class="shooting-input-left" id="shooting-input-left" oninput="generateImage()" />
-        <input type="range" min="0" max="10" value="5" class="shooting-input-right" id="shooting-input-right" oninput="generateImage()" />
-      </div>
-    </div>
-
-    <div class="passing-container">
-      <div>
-        <h2>Passing</h2>
-        <input type="range" min="0" max="10" value="5" class="passing-input-left" id="passing-input-left" oninput="generateImage()" />
-        <input type="range" min="0" max="10" value="5" class="passing-input-right" id="passing-input-right" oninput="generateImage()" />
-      </div>
-    </div>
-
-    <div class="technique-container">
-      <div>
-        <h2>Technique</h2>
-        <input type="range" min="0" max="10" value="5" class="technique-input-left" id="technique-input-left" oninput="generateImage()" />
-        <input type="range" min="0" max="10" value="5" class="technique-input-right" id="technique-input-right" oninput="generateImage()" />
-      </div>
-    </div>
-
-    <img src="" alt="" class="output-image" id="output-image" />
-
-   
-
-      <!-- Output image -->
-      <div class="output-image-container">
-        <img src="" alt="Character Image" id="output-image">
-      </div>
-    </div>
-
-    <!-- Script to handle character creation -->
-    <script>
-      function createCharacter() {
-        // Get input values
-        const strength = document.getElementById("strength-input").value;
-        const speed = document.getElementById("speed-input").value;
-        const shootingLeft = document.getElementById("shooting-input-left").value;
-        const shootingRight = document.getElementById("shooting-input-right").value;
-        const passingLeft = document.getElementById("passing-input-left").value;
-        const passingRight = document.getElementById("passing-input-right").value;
-        const techniqueLeft = document.getElementById("technique-input-left").value;
-        const techniqueRight = document.getElementById("technique-input-right").value;
-
-        // Create character canvas
-        const canvas = document.createElement("canvas");
-        canvas.width = 400;
-        canvas.height = 400;
-        const ctx = canvas.getContext("2d");
-
-        // Draw character
-        ctx.fillStyle = "white";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-        ctx.fillStyle = "black";
-        ctx.fillRect(0, 0, canvas.width * (strength / 100), 50);
-        ctx.fillRect(0, 350, canvas.width * (speed / 100), 50);
-        ctx.fillRect(0, 100, canvas.width * (shootingLeft / 100), 50);
-        ctx.fillRect(canvas.width - (canvas.width * (shootingRight / 100)), 200, canvas.width * (shootingRight / 100), 50);
-        ctx.fillRect(0, 200, canvas.width * (passingLeft / 100), 50);
-        ctx.fillRect(canvas.width - (canvas.width * (passingRight / 100)), 300, canvas.width * (passingRight / 100), 50);
-        ctx.fillRect(0, 300, canvas.width * (techniqueLeft / 100), 50);
-        ctx.fillRect(canvas.width - (canvas.width * (techniqueRight / 100)), 100, canvas.width * (techniqueRight / 100), 50);
-
-        // Set output image source
-        const outputImage = document.getElementById("output-image");
-        outputImage.src = canvas.toDataURL();
-      }
-    </script>
-  </body>
-</html>
-
-
+    <div class="input-container">
+      <input type="number" class="input-box" min="1" max="25" placeholder="Left box">
+      <h2 style="margin: 0 10px;">Shooting</h2>
+      <input type="number" class="input-box" min="1" max="25" placeholder="Right box">
+      <input type="number" class="input-box" min="1
