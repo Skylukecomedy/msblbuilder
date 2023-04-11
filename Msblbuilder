@@ -82,58 +82,7 @@ const items = {
     ]
     }
 
-function filterItems() {
-  const minSpeed = Number(document.querySelector('[name="speed-left"]').value) || 0;
-  const maxSpeed = Number(document.querySelector('[name="speed-right"]').value) || 25;
-  const minPassing = Number(document.querySelector('[name="passing-left"]').value) || 0;
-  const maxPassing = Number(document.querySelector('[name="passing-right"]').value) || 25;
-  const minShooting = Number(document.querySelector('[name="shooting-left"]').value) || 0;
-  const maxShooting = Number(document.querySelector('[name="shooting-right"]').value) || 25;
-  const minStrength = Number(document.querySelector('[name="strength-left"]').value) || 0;
-  const maxStrength = Number(document.querySelector('[name="strength-right"]').value) || 25;
-  const minTechnique = Number(document.querySelector('[name="technique-left"]').value) || 0;
-  const maxTechnique = Number(document.querySelector('[name="technique-right"]').value) || 25;
 
-  const filteredItems = items.head.filter(item => {
-    const stats = item.stats;
-    return (
-      stats.speed >= minSpeed && stats.speed <= maxSpeed &&
-      stats.passing >= minPassing && stats.passing <= maxPassing &&
-      stats.shooting >= minShooting && stats.shooting <= maxShooting &&
-      stats.strength >= minStrength && stats.strength <= maxStrength &&
-      stats.technique >= minTechnique && stats.technique <= maxTechnique
-    );
-  });
-
-  const resultContainer = document.getElementById('result');
-  resultContainer.innerHTML = '';
-  if (filteredItems.length === 0) {
-    resultContainer.innerHTML = 'No items found';
-  } else {
-    filteredItems.forEach(item => {
-      const listItem = document.createElement('li');
-      listItem.innerHTML = item.name;
-      resultContainer.appendChild(listItem);
-    });
-  }
-}
-
-document.getElementById('filter-button').addEventListener('click', filterItems);
-
-
-
-const resultContainer = document.getElementById('result-container');
-resultContainer.innerHTML = ''; // Clear previous contents
-
-if (filteredItems.length === 0) {
-  resultContainer.innerHTML = 'No items found';
-} else {
-  filteredItems.forEach(item => {
-    const listItem = document.createElement('li');
-    listItem.innerHTML = item.name;
-    resultContainer.appendChild(listItem);
-  });
-}
 
 
 </script>
