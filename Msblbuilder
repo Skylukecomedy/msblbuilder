@@ -82,6 +82,31 @@
 </style>
 
 </head>
+
+<script>
+  // Get references to the input boxes and filter box
+  const strengthLeftInput = document.querySelector('input[name="strength-left"]');
+  const strengthRightInput = document.querySelector('input[name="strength-right"]');
+  const filterBox = document.querySelector('.filter-box');
+
+  // Add event listener to the filter box
+  filterBox.addEventListener('click', function() {
+    // Get the values of the input boxes and add them together
+    const strengthLeftValue = parseInt(strengthLeftInput.value);
+    const strengthRightValue = parseInt(strengthRightInput.value);
+    const totalStrength = strengthLeftValue + strengthRightValue;
+
+    // Create a new box to display the result
+    const resultBox = document.createElement('div');
+    resultBox.classList.add('result-box');
+    resultBox.textContent = `Total Strength: ${totalStrength}`;
+
+    // Append the result box to the body
+    document.body.appendChild(resultBox);
+  });
+</script>
+
+
   <body>
 
 <div class="dropdown">
