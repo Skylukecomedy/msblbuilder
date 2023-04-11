@@ -61,7 +61,26 @@ const items = {
   body: [
     {name: 'Muscle Chest', id: 1, stats: {strength: 2, shooting: -2}},
     {name: 'Turbo Pad', id: 2, stats: {speed: 2, passing: -2}},
-    {name: 'Cannon Plate', id: 3, stats: {shooting: 2, strength
+    {name: 'Cannon Plate', id: 3, stats: {shooting: 2, strength -2}},
+    {name: 'Chain Plate', id: 4, stats: {passing: 2, technique: -2}},
+    {name: 'Trick Pad', id: 5, stats: {technique: 2, strength: -2}},
+    {name: 'Bushido Armour', id: 6, stats: {strength: 4, speed: -1, shooting: -1, passing: -1, technique: -1}},
+    {name: 'Knight plate', id: 7, stats: {strength: 2, shooting: 1, technique: 1, speed: -2, passing: -2}},
+    {name: 'Barrel armor', id: 8, stats: {shooting: 2, passing: 2, strength: -1, speed: -2, technique: -2}},
+    {name: 'Shellfish armor', id: 9, stats: {speed: 2, shooting: 1, technique: 1, strength: -2, passing: -2}},
+  ],
+    legs: [
+    {name: 'Muscle Boots', id: 1, stats: {strength: 2, speed: -2}},
+    {name: 'Turbo Boots', id: 2, stats: {speed: 2, shooting: -2}},
+    {name: 'Cannon Boots', id: 3, stats: {shooting: 2, passing: -2}},
+    {name: 'Chain Boots', id: 4, stats: {passing: 2, strength: -2}},
+    {name: 'Trick Boots', id: 5, stats: {technique: 2, shooting: -2}},
+    {name: 'Bushido Sandals', id: 6, stats: {speed: 4, strength: -1, shooting: -1, passing: -1, technique: -1}},
+    {name: 'Knight boots', id: 7, stats: {strength: 2, shooting: 2, passing: -1, technique: -1, speed: -2}},
+    {name: 'Barrel boots', id: 8, stats: {shooting: 2, passing: 1, strength: 1, speed: -2, technique: -2}},
+    {name: 'Shellfish boots', id: 9, stats: {speed: 2, passing: 1, technique: 1, strength: -2, shooting: -2}},
+    ]
+    }
 
 
 
