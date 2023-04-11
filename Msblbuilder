@@ -4,6 +4,37 @@
 
 <script> let mario = { strength: 11, speed: 12, shooting: 14, passing: 10, technique: 16 
 }; 
+let luigi = { strength: 11, speed: 11, shooting: 10, passing: 14, technique: 17 };
+
+let bowser = { strength: 17, speed: 9, shooting: 17, passing: 11, technique: 9 };
+
+let peach = { strength: 9, speed: 17, shooting: 9, passing: 13, technique: 15 };
+
+let rosalina = { strength: 14, speed: 9, shooting: 17, passing: 10, technique: 13 };
+
+let toad = { strength: 9, speed: 17, shooting: 11, passing: 15, technique: 11 };
+
+let yoshi = { strength: 10, speed: 10, shooting: 17, passing: 17, technique: 9 };
+
+let donkeyKong = { strength: 16, speed: 9, shooting: 13, passing: 16, technique: 9 };
+
+let wario = { strength: 17, speed: 9, shooting: 15, passing: 13, technique: 9 };
+
+let waluigi = { strength: 15, speed: 16, shooting: 9, passing: 9, technique: 14 };
+
+let daisy = { strength: 13, speed: 9, shooting: 10, passing: 13, technique: 18 };
+
+let shyGuy = { strength: 13, speed: 12, shooting: 13, passing: 13, technique: 12 };
+
+let pauline = { strength: 20, speed: 16, shooting: 9, passing: 9, technique: 9 };
+
+let diddyKong = { strength: 9, speed: 16, shooting: 9, passing: 16, technique: 13 };
+
+let bowserJr = { strength: 13, speed: 13, shooting: 11, passing: 17, technique: 9 };
+
+let birdo = { strength: 9, speed: 10, shooting: 18, passing: 9, technique: 17 };
+
+
 </script>
     <title>MSBL Character Selector</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
