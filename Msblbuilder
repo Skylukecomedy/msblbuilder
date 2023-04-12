@@ -1,55 +1,12 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>MSBL Character Selector </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>
+ </title>
+
+
   <style>
-      /* Style the button */
-      .dropbtn {
-        background-color: #4CAF50;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-        position: absolute;
-        top: 0;
-        right: 0;
-      }
-
-      /* Style the dropdown content */
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        z-index: 1;
-      }
-
-      /* Style the links inside the dropdown */
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-
-      /* Change color of dropdown links on hover */
-      .dropdown-content a:hover {
-        background-color: #f1f1f1;
-      }
-
-     
-/* Show the dropdown menu on hover or click */
-  .dropdown:hover .dropdown-content,
-  .dropdown.clicked .dropdown-content {
-    display: block;
-  }
-
-  /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn,
-  .dropdown.clicked .dropbtn {
-    background-color: #3e8e41;
-  }
-
+      
 
 
   .filter-box {
@@ -76,27 +33,7 @@
 
 
 <body>
-	<div class="dropdown">
-	  <button class="dropbtn" id="character-selection">Character Selection</button>
-	  <div class="dropdown-content">
-	    <a href="#" class="character-name">Mario</a>
-	    <a href="#" class="character-name">Luigi</a>
-	    <a href="#" class="character-name">Bowser</a>
-	    <a href="#" class="character-name">Peach</a>
-	    <a href="#" class="character-name">Rosalina</a>
-	    <a href="#" class="character-name">Toad</a>
-	    <a href="#" class="character-name">Yoshi</a>
-	    <a href="#" class="character-name">Donkey Kong</a>
-	    <a href="#" class="character-name">Wario</a>
-	    <a href="#" class="character-name">Waluigi</a>
-	    <a href="#" class="character-name">Daisy</a>
-	    <a href="#" class="character-name">Shy Guy</a>
-	    <a href="#" class="character-name">Pauline</a>
-	    <a href="#" class="character-name">Diddy Kong</a>
-	    <a href="#" class="character-name">Bowser Jr</a> 
-	    <a href="#" class="character-name">Birdo</a>
-	  </div>
-	</div>
+	
 
 
 		
