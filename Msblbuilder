@@ -4,9 +4,11 @@
    <title>MSBL Character Selector </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    
+     
 
-.filter-box {
+
+
+  .filter-box {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -22,52 +24,6 @@
     text-decoration: none;
     font-weight: bold;
   }
-
-
-</style>
-
-<style>
-  /* Position the character names on the left side */
-  .character-names {
-    position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px;
-    background-color: white;
-  }
-
-  /* Style the character names */
-  .character-names p {
-    margin: 0;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-
-<div class="character-names">
-  <p>Mario</p>
-  <p>Luigi</p>
-  <p>Bowser</p>
-  <p>Peach</p>
-  <p>Rosy</p>
-  <p>Toad</p>
-  <p>Yoshi</p>
-  <p>DK</p>
-  <p>Wario</p>
-  <p>Wali</p>
-  <p>Daisy</p>
-  <p>Shyguy</p>
-  <p>Diddy</p>
-  <p>Jr</p>
-  <p>Birdo</p>
-</div>
-
-
-
-
- 
 
     
 </style>
