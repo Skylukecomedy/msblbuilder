@@ -432,6 +432,108 @@ characters.forEach(character => {
   const characterElement = document.getElementById(character.name.toLowerCase());
   characterElement.dataset.stats = JSON.stringify(character.stats);
 });
+
+const gear = [
+  {
+    name: 'Muscle Helmet',
+    id: 1,
+    slot: 'head',
+    stats: {
+      strength: 2,
+      technique: -2
+    }
+  },
+  {
+    name: 'Turbo Helmet',
+    id: 2,
+    slot: 'head',
+    stats: {
+      speed: 2,
+      technique: -2
+    }
+  },
+  {
+    name: 'Cannon Visor',
+    id: 3,
+    slot: 'head',
+    stats: {
+      shooting: 2,
+      technique: -2
+    }
+  },
+  {
+    name: 'Chain Helmet',
+    id: 4,
+    slot: 'head',
+    stats: {
+      passing: 2,
+      speed: -2
+    }
+  },
+  {
+    name: 'Trick Helmet',
+    id: 5,
+    slot: 'head',
+    stats: {
+      technique: 2,
+      passing: -2
+    }
+  },
+  {
+    name: 'Bushido Helmet',
+    id: 6,
+    slot: 'head',
+    stats: {
+      passing: 4,
+      strength: -1,
+      speed: -1,
+      shooting: -1,
+      technique: -1
+    }
+  },
+  {
+    name: 'Knight Helmet',
+    id: 7,
+    slot: 'head',
+    stats: {
+      strength: 2,
+      shooting: 1,
+      passing: 1,
+      speed: -2,
+      technique: -2
+    }
+  },
+  {
+    name: 'Barrel Helmet',
+    id: 8,
+    slot: 'head',
+    stats: {
+      shooting: 2,
+      passing: 1,
+      speed: 1,
+      strength: -2,
+      technique: -2
+    }
+  },
+  {
+    name: 'Shellfish Helmet',
+    id: 9,
+    slot: 'head',
+    stats: {
+      speed: 2,
+      technique: 2,
+      strength: -2,
+      shooting: -1,
+      passing: -1
+    }
+  },
+
+
+
+
+];
+
+
 </script>
   </body>
 </html>
