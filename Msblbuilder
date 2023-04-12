@@ -55,23 +55,7 @@
         background-color: #3e8e41;
       }
 
- /* Style the strength, speed, shooting, passing, and technique input sections */
-  .input-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-  }
 
-  .input-box {
-    border: none;
-    font-size: 16px;
-    text-align: center;
-    margin: 0 10px;
-  }
-
-  .input-box:focus {
-    outline: none;
-  }
 
 .filter-box {
   display: inline-block;
