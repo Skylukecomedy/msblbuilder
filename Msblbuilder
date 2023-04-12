@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html>
-  <head>
-
-<script> 
-
-
-
-    
-
-</script>
-    <title>MSBL Character Selector</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
+ <head>
+  <title> <title>MSBL Character Selector </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
       /* Style the button */
       .dropbtn {
         background-color: #4CAF50;
@@ -76,43 +68,60 @@
 
 </style>
 
-</head>
+<body>
+	<div class="dropdown">
+	  <button class="dropbtn" id="character-selection">Character Selection</button>
+	  <div class="dropdown-content">
+	    <a href="#" class="character-name">Mario</a>
+	    <a href="#" class="character-name">Luigi</a>
+	    <a href="#" class="character-name">Bowser</a>
+	    <a href="#" class="character-name">Peach</a>
+	    <a href="#" class="character-name">Rosalina</a>
+	    <a href="#" class="character-name">Toad</a>
+	    <a href="#" class="character-name">Yoshi</a>
+	    <a href="#" class="character-name">Donkey Kong</a>
+	    <a href="#" class="character-name">Wario</a>
+	    <a href="#" class="character-name">Waluigi</a>
+	    <a href="#" class="character-name">Daisy</a>
+	    <a href="#" class="character-name">Shy Guy</a>
+	    <a href="#" class="character-name">Pauline</a>
+	    <a href="#" class="character-name">Diddy Kong</a>
+	    <a href="#" class="character-name">Bowser Jr</a> 
+	    <a href="#" class="character-name">Birdo</a>
+	  </div>
+	</div>
+
+<script>
+		// get all the character name links
+		const characterLinks = document.querySelectorAll('.character-name');
+
+		// loop through each character name link
+		characterLinks.forEach(link => {
+			// add a click event listener to each link
+			link.addEventListener('click', (event) => {
+				event.preventDefault(); // prevent the default link behavior
+				const name = event.target.innerText; // get the clicked character name
+				const message = `You have selected ${name}`; // create a message with the selected character name
+				const messageElement = document.createElement('p'); // create a new <p> element
+				messageElement.innerText = message; // set the text content of the <p> element
+				document.body.appendChild(messageElement); // add the <p> element to the bottom of the page
+			});
+		});
+	</script>
+
+	
+</body>
 
 
 
 
- 
-
-<div class="dropdown">
-  <button class="dropbtn" id="character-selection">Character Selection</button>
-  <div class="dropdown-content">
-    <a href="#" class="character-name">Mario</a>
-    <a href="#" class="character-name">Luigi</a>
-    <a href="#" class="character-name">Bowser</a>
-    <a href="#" class="character-name">Peach</a>
-    <a href="#" class="character-name">Rosalina</a>
-    <a href="#" class="character-name">Toad</a>
-    <a href="#" class="character-name">Yoshi</a>
-    <a href="#" class="character-name">Donkey Kong</a>
-    <a href="#" class="character-name">Wario</a>
-    <a href="#" class="character-name">Waluigi</a>
-    <a href="#" class="character-name">Daisy</a>
-    <a href="#" class="character-name">Shy Guy</a>
-    <a href="#" class="character-name">Pauline</a>
-    <a href="#" class="character-name">Diddy Kong</a>
-    <a href="#" class="character-name">Bowser Jr</a> 
-    <a href="#" class="character-name">Birdo</a>
 
    
-  </div>
-</div>
-
-
-
+   
 <div class="filter-box">
   <a href="#" class="filter-link">Filter</a>
 </div>
 
 
 
-
+</html>
