@@ -107,6 +107,33 @@ const items = {
           );
         });
 
+
+// Get the filter link and result container elements
+      const filterLink = document.querySelector('.filter-link');
+      const resultContainer = document.querySelector('#result-container');
+
+      // Add event listener to the filter link
+      filterLink.addEventListener('click', function() {
+        // Call function to filter and display results
+        displayFilteredResults();
+      });
+
+      // Function to filter and display results
+      function displayFilteredResults() {
+        // TODO: Add code to filter the data and store the filtered results in a variable
+
+        // Clear the result container
+        resultContainer.innerHTML = '';
+
+        // Create a new div element to display the filtered results
+        const resultsBox = document.createElement('div');
+
+        // TODO: Add code to populate the results box with the filtered results
+
+        // Add the results box to the result container
+        resultContainer.appendChild(resultsBox);
+      }
+
         const resultContainer = document.getElementById('result-container');
         resultContainer.innerHTML = ''; // Clear previous contents
 
