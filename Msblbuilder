@@ -76,19 +76,20 @@
 <script>
  
     var dropdown = document.querySelector('.dropdown');
-  var characterSelection = document.querySelector('#character-selection');
+var characterSelection = document.querySelector('#character-selection');
 
-  // Add an event listener to the character selection button
-  characterSelection.addEventListener('click', function() {
-    dropdown.classList.toggle('show'); // Toggle the "show" class on the dropdown
-  });
+// Add an event listener to the character selection button
+characterSelection.addEventListener('click', function() {
+  dropdown.classList.toggle('clicked'); // Toggle the "clicked" class on the dropdown button
+});
 
-  // Close the dropdown if the user clicks outside of it
-  window.addEventListener('click', function(event) {
-    if (!event.target.matches('#character-selection') && !event.target.closest('.dropdown-content')) {
-      dropdown.classList.remove('show');
-    }
-  });
+// Close the dropdown if the user clicks outside of it
+window.addEventListener('click', function(event) {
+  if (!event.target.matches('#character-selection')) {
+    dropdown.classList.remove('clicked');
+  }
+});
+
 // get all the character name links
 		const characterLinks = document.querySelectorAll('.character-name');
 
