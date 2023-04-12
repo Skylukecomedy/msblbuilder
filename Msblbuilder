@@ -84,10 +84,163 @@ const marioStats = {
       technique: 16
     };
 
-    // Set the stats values to the Mario character
-    const mario = document.getElementById('mario');
-    mario.dataset.stats = JSON.stringify(marioStats);
+{
+    name: 'Luigi',
+    stats: {
+      strength: 11,
+      speed: 11,
+      shooting: 10,
+      passing: 14,
+      technique: 17
+    }
+  },
+  {
+    name: 'Bowser',
+    stats: {
+      strength: 17,
+      speed: 9,
+      shooting: 17,
+      passing: 11,
+      technique: 9
+    }
+  },
+  {
+    name: 'Peach',
+    stats: {
+      strength: 9,
+      speed: 17,
+      shooting: 9,
+      passing: 13,
+      technique: 15
+    }
+  },
+  {
+    name: 'Rosy',
+    stats: {
+      strength: 14,
+      speed: 9,
+      shooting: 17,
+      passing: 10,
+      technique: 13
+    }
+  },
+  {
+    name: 'Toad',
+    stats: {
+      strength: 9,
+      speed: 17,
+      shooting: 11,
+      passing: 15,
+      technique: 11
+    }
+  },
+  {
+    name: 'Yoshi',
+    stats: {
+      strength: 10,
+      speed: 10,
+      shooting: 17,
+      passing: 17,
+      technique: 9
+    }
+  },
+  {
+    name: 'DK',
+    stats: {
+      strength: 16,
+      speed: 9
+      shooting: 13,
+      passing: 16,
+      technique: 9
+    }
+  },
+  {
+    name: 'Wario',
+    stats: {
+      strength: 17,
+      speed: 9,
+      shooting: 15,
+      passing: 13,
+      technique: 9
+    }
+  },
+  {
+    name: 'Wali',
+    stats: {
+      strength: 15,
+      speed: 16,
+      shooting: 9,
+      passing: 9,
+      technique: 14
+    }
+  },
+  {
+    name: 'Daisy',
+    stats: {
+      strength: 13,
+      speed: 9,
+      shooting: 10,
+      passing: 13,
+      technique: 18
+    }
+  },
+  {
+    name: 'Shyguy',
+    stats: {
+      strength: 13,
+      speed: 12,
+      shooting: 13,
+      passing: 13,
+      technique: 12
+    }
+  },
+  {
+    name: 'Diddy',
+    stats: {
+      strength: 9,
+      speed: 16,
+      shooting: 9
+      passing: 16,
+      technique: 13
+    }
+  },
+  {
+    name: 'Jr',
+    stats: {
+      strength: 13,
+      speed: 13,
+      shooting: 11,
+      passing: 17,
+      technique: 9
+    }
+  },
+  {
+    name: 'Birdo',
+    stats: {
+      strength: 9,
+      speed: 10,
+      shooting: 18,
+      passing: 9,
+      technique: 17
+    }
+  }
+},
+{
+    name: 'Paul',
+    stats: {
+      strength: 20,
+      speed: 16,
+      shooting: 9,
+      passing: 9,
+      technique: 9
+    }
+  };
 
+    // Set the stats values to each character
+characters.forEach(character => {
+  const characterElement = document.getElementById(character.name.toLowerCase());
+  characterElement.dataset.stats = JSON.stringify(character.stats);
+});
 </script>
   </body>
 </html>
