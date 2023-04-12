@@ -69,21 +69,7 @@
     font-weight: bold;
   }
 
-      /* Add a transition effect to the link */
-  .character-name {
-    transition: all 0.5s ease;
-  }
-
-  /* Add a different background color to the link when hovered */
-  .character-name:hover {
-    background-color: lightgray;
-  }
-
-  /* Add a different background color to the link when clicked */
-  .character-name.clicked {
-    background-color: gray;
-  }
-
+    
 </style>
 
 </head>
@@ -120,20 +106,6 @@
 
 
 <script>
-
-// Get the 'Mario' link element
-  const marioLink = document.querySelector('.character-name[href="#"]:first-child');
-
-  // Add an event listener for click event
-  marioLink.addEventListener('click', () => {
-    // Add a 'clicked' class to the 'Mario' link element
-    marioLink.classList.add('clicked');
-
-    // Remove the 'Mario' link element from the DOM after a short delay
-    setTimeout(() => {
-      marioLink.remove();
-    }, 500); // Delay of 500 milliseconds (0.5 seconds)
-  });
 
 </script>
 
