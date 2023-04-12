@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <title>MSBL Character Selector </title>
+   <title>MSBL Character Selector </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
       /* Style the button */
@@ -117,6 +117,9 @@
 
    
    
+<div class="filter-box">
+  <a href="#" class="filter-link">Filter</a>
+</div>
 
 
 
