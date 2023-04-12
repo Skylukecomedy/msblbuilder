@@ -71,5 +71,21 @@
     <div class="filter-box">
       <a href="#" class="filter-link">Filter</a>
     </div>
+
+<script>
+
+const marioStats = {
+      strength: 11,
+      speed: 12,
+      shooting: 14,
+      passing: 10,
+      technique: 16
+    };
+
+    // Set the stats values to the Mario character
+    const mario = document.getElementById('mario');
+    mario.dataset.stats = JSON.stringify(marioStats);
+
+</script>
   </body>
 </html>
