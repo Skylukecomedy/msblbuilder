@@ -71,6 +71,15 @@
 
 </style>
 
+</head>
+
+<script>
+  function toggleDropdown() {
+    var dropdown = document.getElementsByClassName("dropdown")[0];
+    dropdown.classList.toggle("clicked");
+  }
+</script>
+
 <body>
 	<div class="dropdown">
 	  <button class="dropbtn" id="character-selection">Character Selection</button>
