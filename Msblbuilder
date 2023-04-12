@@ -78,6 +78,25 @@
 <script>
  
     
+    // get all the character name links
+    const characterLinks = document.querySelectorAll('.character-name');
+
+    // loop through each character name link
+    characterLinks.forEach(link => {
+      // add a click event listener to each link
+      link.addEventListener('click', (event) => {
+        event.preventDefault(); // prevent the default link behavior
+        const name = event.target.innerText; // get the clicked character name
+        const message = `You have selected ${name}`; // create a message with the selected character name
+        const messageElement = document.createElement('p'); // create a new <p> element
+        messageElement.innerText = message; // set the text content of the <p> element
+        document.body.appendChild(messageElement); // add the <p> element to the bottom of the page
+
+        // remove the "clicked" class from the dropdown button to hide the dropdown content
+        dropdown.classList.remove('clicked');
+      });
+    });
+  
 
 </script>
 
