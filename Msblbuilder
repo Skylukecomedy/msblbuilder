@@ -2,153 +2,10 @@
 <html>
   <head>
 
-<script> let mario = { strength: 11, speed: 12, shooting: 14, passing: 10, technique: 16 
-}; 
-let luigi = { strength: 11, speed: 11, shooting: 10, passing: 14, technique: 17 };
-
-let bowser = { strength: 17, speed: 9, shooting: 17, passing: 11, technique: 9 };
-
-let peach = { strength: 9, speed: 17, shooting: 9, passing: 13, technique: 15 };
-
-let rosalina = { strength: 14, speed: 9, shooting: 17, passing: 10, technique: 13 };
-
-let toad = { strength: 9, speed: 17, shooting: 11, passing: 15, technique: 11 };
-
-let yoshi = { strength: 10, speed: 10, shooting: 17, passing: 17, technique: 9 };
-
-let donkeyKong = { strength: 16, speed: 9, shooting: 13, passing: 16, technique: 9 };
-
-let wario = { strength: 17, speed: 9, shooting: 15, passing: 13, technique: 9 };
-
-let waluigi = { strength: 15, speed: 16, shooting: 9, passing: 9, technique: 14 };
-
-let daisy = { strength: 13, speed: 9, shooting: 10, passing: 13, technique: 18 };
-
-let shyGuy = { strength: 13, speed: 12, shooting: 13, passing: 13, technique: 12 };
-
-let pauline = { strength: 20, speed: 16, shooting: 9, passing: 9, technique: 9 };
-
-let diddyKong = { strength: 9, speed: 16, shooting: 9, passing: 16, technique: 13 };
-
-let bowserJr = { strength: 13, speed: 13, shooting: 11, passing: 17, technique: 9 };
-
-let birdo = { strength: 9, speed: 10, shooting: 18, passing: 9, technique: 17 };
-
-// Define an object for each item with their respective stats
-const items = {
-  head: [
-    {name: 'Muscle Helmet', id: 1, stats: {strength: 2, technique: -2}},
-    {name: 'Turbo Helmet', id: 2, stats: {speed: 2, technique: -2}},
-    {name: 'Cannon Visor', id: 3, stats: {shooting: 2, technique: -2}},
-    {name: 'Chain Helmet', id: 4, stats: {passing: 2, speed: -2}},
-    {name: 'Trick Helmet', id: 5, stats: {technique: 2, passing: -2}},
-    {name: 'Bushido Helmet', id: 6, stats: {passing: 4, strength: -1, speed: -1, shooting: -1, technique: -1}},
-    {name: 'Knight helmet', id: 7, stats: {strength: 2, shooting: 1, passing: 1, speed: -2, technique: -2}},
-    {name: 'Barrel helmet', id: 8, stats: {shooting: 2, passing: 1, speed: 1, strength: -2, technique: -2}},
-    {name: 'Shellfish helmet', id: 9, stats: {speed: 2, technique: 2, strength: -2, shooting: -1, passing: -1}},
-  ],
-  arms: [
-    {name: 'Muscle Gauntlets', id: 1, stats: {strength: 2, passing: -2}},
-    {name: 'Turbo Gloves', id: 2, stats: {speed: 2, strength: -2}},
-    {name: 'Cannon Gloves', id: 3, stats: {shooting: 2, speed: -2}},
-    {name: 'Chain Gauntlets', id: 4, stats: {passing: 2, shooting: -2}},
-    {name: 'Trick Gloves', id: 5, stats: {technique: 2, speed: -2}},
-    {name: 'Bushido Bracers', id: 6, stats: {technique: 4, strength: -1, speed: -1, shooting: -1, passing: -1}},
-    {name: 'Knight gauntlets', id: 7, stats: {strength: 2, shooting: 1, speed: 1, passing: -2, technique: -2}},
-    {name: 'Barrel gauntlets', id: 8, stats: {shooting: 2, technique: 1, passing: 1, strength: -2, speed: -2}},
-    {name: 'Shellfish gauntlets', id: 9, stats: {speed: 2, strength: 1, technique: 1, shooting: -2, passing: -2}},
-  ],
-  body: [
-    {name: 'Muscle Chest', id: 1, stats: {strength: 2, shooting: -2}},
-    {name: 'Turbo Pad', id: 2, stats: {speed: 2, passing: -2}},
-    {name: 'Cannon Plate', id: 3, stats: {shooting: 2, strength -2}},
-    {name: 'Chain Plate', id: 4, stats: {passing: 2, technique: -2}},
-    {name: 'Trick Pad', id: 5, stats: {technique: 2, strength: -2}},
-    {name: 'Bushido Armour', id: 6, stats: {strength: 4, speed: -1, shooting: -1, passing: -1, technique: -1}},
-    {name: 'Knight plate', id: 7, stats: {strength: 2, shooting: 1, technique: 1, speed: -2, passing: -2}},
-    {name: 'Barrel armor', id: 8, stats: {shooting: 2, passing: 2, strength: -1, speed: -2, technique: -2}},
-    {name: 'Shellfish armor', id: 9, stats: {speed: 2, shooting: 1, technique: 1, strength: -2, passing: -2}},
-  ],
-    legs: [
-    {name: 'Muscle Boots', id: 1, stats: {strength: 2, speed: -2}},
-    {name: 'Turbo Boots', id: 2, stats: {speed: 2, shooting: -2}},
-    {name: 'Cannon Boots', id: 3, stats: {shooting: 2, passing: -2}},
-    {name: 'Chain Boots', id: 4, stats: {passing: 2, strength: -2}},
-    {name: 'Trick Boots', id: 5, stats: {technique: 2, shooting: -2}},
-    {name: 'Bushido Sandals', id: 6, stats: {speed: 4, strength: -1, shooting: -1, passing: -1, technique: -1}},
-    {name: 'Knight boots', id: 7, stats: {strength: 2, shooting: 2, passing: -1, technique: -1, speed: -2}},
-    {name: 'Barrel boots', id: 8, stats: {shooting: 2, passing: 1, strength: 1, speed: -2, technique: -2}},
-    {name: 'Shellfish boots', id: 9, stats: {speed: 2, passing: 1, technique: 1, strength: -2, shooting: -2}},
-    ]
-    }
+<script> 
 
 
 
-      function filterItems() {
-        const minSpeed = Number(document.querySelector('[name="speed-left"]').value) || 0;
-        const maxSpeed = Number(document.querySelector('[name="speed-right"]').value) || 25;
-        const minPassing = Number(document.querySelector('[name="passing-left"]').value) || 0;
-        const maxPassing = Number(document.querySelector('[name="passing-right"]').value) || 25;
-        const minShooting = Number(document.querySelector('[name="shooting-left"]').value) || 0;
-        const maxShooting = Number(document.querySelector('[name="shooting-right"]').value) || 25;
-        const minStrength = Number(document.querySelector('[name="strength-left"]').value) || 0;
-        const maxStrength = Number(document.querySelector('[name="strength-right"]').value) || 25;
-        const minTechnique = Number(document.querySelector('[name="technique-left"]').value) || 0;
-        const maxTechnique = Number(document.querySelector('[name="technique-right"]').value) || 25;
-
-        const filteredItems = items.head.filter(item => {
-          const stats = item.stats;
-          return (
-            stats.speed >= minSpeed && stats.speed <= maxSpeed &&
-            stats.passing >= minPassing && stats.passing <= maxPassing &&
-            stats.shooting >= minShooting && stats.shooting <= maxShooting &&
-            stats.strength >= minStrength && stats.strength <= maxStrength &&
-            stats.technique >= minTechnique && stats.technique <= maxTechnique
-          );
-        });
-
-
-// Get the filter link and result container elements
-      const filterLink = document.querySelector('.filter-link');
-      const resultContainer = document.querySelector('#result-container');
-
-      // Add event listener to the filter link
-      filterLink.addEventListener('click', function() {
-        // Call function to filter and display results
-        displayFilteredResults();
-      });
-
-      // Function to filter and display results
-      function displayFilteredResults() {
-        // TODO: Add code to filter the data and store the filtered results in a variable
-
-        // Clear the result container
-        resultContainer.innerHTML = '';
-
-        // Create a new div element to display the filtered results
-        const resultsBox = document.createElement('div');
-
-        // TODO: Add code to populate the results box with the filtered results
-
-        // Add the results box to the result container
-        resultContainer.appendChild(resultsBox);
-      }
-
-        const resultContainer = document.getElementById('result-container');
-        resultContainer.innerHTML = ''; // Clear previous contents
-
-        if (filteredItems.length === 0) {
-          resultContainer.innerHTML = 'No items found';
-        } else {
-          filteredItems.forEach(item => {
-            const listItem = document.createElement('li');
-            listItem.innerHTML = item.name;
-            resultContainer.appendChild(listItem);
-          });
-        }
-      }
-
-      document.getElementById('filter-button').addEventListener('click', filterItems);
     
 
 </script>
@@ -198,7 +55,7 @@ const items = {
         background-color: #3e8e41;
       }
 
-  /* Style the strength, speed, shooting, passing, and technique input sections */
+ /* Style the strength, speed, shooting, passing, and technique input sections */
   .input-container {
     display: flex;
     justify-content: center;
@@ -230,16 +87,8 @@ const items = {
   font-weight: bold;
 }
 
-/* Style the result box */
-      .result-box {
-        background-color: #4CAF50;
-        color: white;
-        border-radius: 5px;
-        padding: 10px;
-        margin-top: 10px;
-      }
 
-
+      
 
 </style>
 
@@ -274,41 +123,12 @@ const items = {
   </div>
 </div>
 
-<div class="input-container">
-  <input type="number" class="input-box" min="1" max="25" placeholder="Left box" name="strength-left">
-  <h2 style="margin: 0 10px;">Strength</h2>
-  <input type="number" class="input-box" min="1" max="25" placeholder="Right box" name="strength-right">
-</div>
-
-<div class="input-container">
-  <input type="number" class="input-box" min="1" max="25" placeholder="Left box" name="speed-left">
-  <h2 style="margin: 0 10px;">Speed</h2>
-  <input type="number" class="input-box" min="1" max="25" placeholder="Right box" name="speed-right">
-</div>
-
-<div class="input-container">
-  <input type="number" class="input-box" min="1" max="25" placeholder="Left box" name="shooting-left">
-  <h2 style="margin: 0 10px;">Shooting</h2>
-  <input type="number" class="input-box" min="1" max="25" placeholder="Right box" name="shooting-right">
-</div>
-
-<div class="input-container">
-  <input type="number" class="input-box" min="1" max="25" placeholder="Left box" name="passing-left">
-  <h2 style="margin: 0 10px;">Passing</h2>
-  <input type="number" class="input-box" min="1" max="25" placeholder="Right box" name="passing-right">
-</div>
-
-<div class="input-container">
-  <input type="number" class="input-box" min="1" max="25" placeholder="Left box" name="technique-left">
-  <h2 style="margin: 0 10px;">Technique</h2>
-  <input type="number" class="input-box" min="1" max="25" placeholder="Right box" name="technique-right">
-</div>
 
 
 <div class="filter-box">
   <a href="#" class="filter-link">Filter</a>
 </div>
 
-<div id="result-container"></div>
+
 
 
