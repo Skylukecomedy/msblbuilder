@@ -724,6 +724,23 @@ const gear = [
 ];
 
 
+const gear = [
+  // gear objects here
+];
+
+const combinations = [];
+
+for (const head of gear.filter(item => item.slot === 'head')) {
+  for (const arms of gear.filter(item => item.slot === 'arms')) {
+    for (const body of gear.filter(item => item.type === 'body')) {
+      for (const legs of gear.filter(item => item.slot === 'legs')) {
+        combinations.push([head, arms, body, legs]);
+      }
+    }
+  }
+}
+
+console.log(combinations);
 
 
 </script>
