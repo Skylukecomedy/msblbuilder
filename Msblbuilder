@@ -85,11 +85,10 @@
 
   // Close the dropdown if the user clicks outside of it
   window.addEventListener('click', function(event) {
-    if (!event.target.matches('#character-selection')) {
+    if (!event.target.matches('#character-selection') && !event.target.closest('.dropdown-content')) {
       dropdown.classList.remove('show');
     }
   });
-
 // get all the character name links
 		const characterLinks = document.querySelectorAll('.character-name');
 
