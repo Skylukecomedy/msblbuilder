@@ -23,6 +23,10 @@
     font-weight: bold;
   }
 
+
+</style>
+
+<style>
   /* Position the character names on the left side */
   .character-names {
     position: fixed;
