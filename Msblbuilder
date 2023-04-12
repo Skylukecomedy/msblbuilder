@@ -58,6 +58,14 @@
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
+.filter-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+
 }
 
 .filter-link {
