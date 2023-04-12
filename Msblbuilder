@@ -4,7 +4,7 @@
    <title>MSBL Character Selector </title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-     <style>
+    
   /* Position the character names on the left side */
   .character-names {
     position: fixed;
