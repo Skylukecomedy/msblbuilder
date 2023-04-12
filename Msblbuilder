@@ -51,24 +51,214 @@
 
   <body>
     <div class="character-names">
-    <p>Mario<input type="text" name="mario-property-1"><input type="text" name="mario-property-2"></p>
-    <p>Luigi<input type="text" name="luigi-property-1"><input type="text" name="luigi-property-2"></p>
-    <p>Bowser<input type="text" name="bowser-property-1"><input type="text" name="bowser-property-2"></p>
-    <p>Peach<input type="text" name="peach-property-1"><input type="text" name="peach-property-2"></p>
-    <p>Rosy<input type="text" name="rosy-property-1"><input type="text" name="rosy-property-2"></p>
-    <p>Toad<input type="text" name="toad-property-1"><input type="text" name="toad-property-2"></p>
-    <p>Yoshi<input type="text" name="yoshi-property-1"><input type="text" name="yoshi-property-2"></p>
-    <p>DK<input type="text" name="dk-property-1"><input type="text" name="dk-property-2"></p>
-    <p>Wario<input type="text" name="wario-property-1"><input type="text" name="wario-property-2"></p>
-    <p>Wali<input type="text" name="wali-property-1"><input type="text" name="wali-property-2"></p>
-    <p>Daisy<input type="text" name="daisy-property-1"><input type="text" name="daisy-property-2"></p>
-    <p>Shyguy<input type="text" name="shyguy-property-1"><input type="text" name="shyguy-property-2"></p>
-    <p>Diddy<input type="text" name="diddy-property-1"><input type="text" name="diddy-property-2"></p>
-    <p>Jr<input type="text" name="jr-property-1"><input type="text" name="jr-property-2"></p>
-    <p>Birdo<input type="text" name="birdo-property-1"><input type="text" name="birdo-property-2"></p>
-    <p>Paul<input type="text" name="paul-property-1"><input type="text" name="paul-property-2"></p>
+    <p>Mario
+      <input type="text" name="mario-property-1">
+      <input type="text" name="mario-property-2">
+      <input type="text" name="mario-property-3">
+      <input type="text" name="mario-property-4">
+      <input type="text" name="mario-property-5">
+      <input type="text" name="mario-property-6">
+      <input type="text" name="mario-property-7">
+      <input type="text" name="mario-property-8">
+      <input type="text" name="mario-property-9">
+      <input type="text" name="mario-property-10">
+    </p>
+    <p>Luigi
+      <input type="text" name="luigi-property-1">
+      <input type="text" name="luigi-property-2">
+      <input type="text" name="luigi-property-3">
+      <input type="text" name="luigi-property-4">
+      <input type="text" name="luigi-property-5">
+      <input type="text" name="luigi-property-6">
+      <input type="text" name="luigi-property-7">
+      <input type="text" name="luigi-property-8">
+      <input type="text" name="luigi-property-9">
+      <input type="text" name="luigi-property-10">
+    </p>
+    <p>Bowser
+      <input type="text" name="bowser-property-1">
+      <input type="text" name="bowser-property-2">
+      <input type="text" name="bowser-property-3">
+      <input type="text" name="bowser-property-4">
+      <input type="text" name="bowser-property-5">
+      <input type="text" name="bowser-property-6">
+      <input type="text" name="bowser-property-7">
+      <input type="text" name="bowser-property-8">
+      <input type="text" name="bowser-property-9">
+      <input type="text" name="bowser-property-10">
+    </p>
+  <p>Peach
+    <input type="text" name="peach-property-1">
+    <input type="text" name="peach-property-2">
+    <input type="text" name="peach-property-3">
+    <input type="text" name="peach-property-4">
+    <input type="text" name="peach-property-5">
+    <input type="text" name="peach-property-6">
+    <input type="text" name="peach-property-7">
+    <input type="text" name="peach-property-8">
+    <input type="text" name="peach-property-9">
+    <input type="text" name="peach-property-10">
+  </p>
 
-  </div>
+  <p>Rosy
+    <input type="text" name="rosy-property-1">
+    <input type="text" name="rosy-property-2">
+    <input type="text" name="rosy-property-3">
+    <input type="text" name="rosy-property-4">
+    <input type="text" name="rosy-property-5">
+    <input type="text" name="rosy-property-6">
+    <input type="text" name="rosy-property-7">
+    <input type="text" name="rosy-property-8">
+    <input type="text" name="rosy-property-9">
+    <input type="text" name="rosy-property-10">
+  </p>
+
+  <p>Toad
+    <input type="text" name="toad-property-1">
+    <input type="text" name="toad-property-2">
+    <input type="text" name="toad-property-3">
+    <input type="text" name="toad-property-4">
+    <input type="text" name="toad-property-5">
+    <input type="text" name="toad-property-6">
+    <input type="text" name="toad-property-7">
+    <input type="text" name="toad-property-8">
+    <input type="text" name="toad-property-9">
+    <input type="text" name="toad-property-10">
+  </p> 
+
+<p>Yoshi
+    <input type="text" name="yoshi-property-1">
+    <input type="text" name="yoshi-property-2">
+    <input type="text" name="yoshi-property-3">
+    <input type="text" name="yoshi-property-4">
+    <input type="text" name="yoshi-property-5">
+    <input type="text" name="yoshi-property-6">
+    <input type="text" name="yoshi-property-7">
+    <input type="text" name="yoshi-property-8">
+    <input type="text" name="yoshi-property-9">
+    <input type="text" name="yoshi-property-10">
+  </p>
+
+<p>Dk
+    <input type="text" name="dk-property-1">
+    <input type="text" name="dk-property-2">
+    <input type="text" name="dk-property-3">
+    <input type="text" name="dk-property-4">
+    <input type="text" name="dk-property-5">
+    <input type="text" name="dk-property-6">
+    <input type="text" name="dk-property-7">
+    <input type="text" name="dk-property-8">
+    <input type="text" name="dk-property-9">
+    <input type="text" name="dk-property-10">
+  </p>
+
+<p>Wario
+    <input type="text" name="wario-property-1">
+    <input type="text" name="wario-property-2">
+    <input type="text" name="wario-property-3">
+    <input type="text" name="wario-property-4">
+    <input type="text" name="wario-property-5">
+    <input type="text" name="wario-property-6">
+    <input type="text" name="wario-property-7">
+    <input type="text" name="wario-property-8">
+    <input type="text" name="wario-property-9">
+    <input type="text" name="wario-property-10">
+  </p>
+
+<p>Wali
+    <input type="text" name="wali-property-1">
+    <input type="text" name="wali-property-2">
+    <input type="text" name="wali-property-3">
+    <input type="text" name="wali-property-4">
+    <input type="text" name="wali-property-5">
+    <input type="text" name="wali-property-6">
+    <input type="text" name="wali-property-7">
+    <input type="text" name="wali-property-8">
+    <input type="text" name="wali-property-9">
+    <input type="text" name="wali-property-10">
+  </p>
+
+<p>Daisy
+    <input type="text" name="daisy-property-1">
+    <input type="text" name="daisy-property-2">
+    <input type="text" name="daisy-property-3">
+    <input type="text" name="daisy-property-4">
+    <input type="text" name="daisy-property-5">
+    <input type="text" name="daisy-property-6">
+    <input type="text" name="daisy-property-7">
+    <input type="text" name="daisy-property-8">
+    <input type="text" name="daisy-property-9">
+    <input type="text" name="daisy-property-10">
+  </p>
+
+<p>Shyguy
+    <input type="text" name="shyguy-property-1">
+    <input type="text" name="shyguy-property-2">
+    <input type="text" name="shyguy-property-3">
+    <input type="text" name="shyguy-property-4">
+    <input type="text" name="shyguy-property-5">
+    <input type="text" name="shyguy-property-6">
+    <input type="text" name="shyguy-property-7">
+    <input type="text" name="shyguy-property-8">
+    <input type="text" name="shyguy-property-9">
+    <input type="text" name="shyguy-property-10">
+  </p>
+
+<p>Diddy
+    <input type="text" name="diddy-property-1">
+    <input type="text" name="diddy-property-2">
+    <input type="text" name="diddy-property-3">
+    <input type="text" name="diddy-property-4">
+    <input type="text" name="diddy-property-5">
+    <input type="text" name="diddy-property-6">
+    <input type="text" name="diddy-property-7">
+    <input type="text" name="diddy-property-8">
+    <input type="text" name="diddy-property-9">
+    <input type="text" name="diddy-property-10">
+  </p>
+
+  <p>Jr
+    <input type="text" name="jr-property-1">
+    <input type="text" name="jr-property-2">
+    <input type="text" name="jr-property-3">
+    <input type="text" name="jr-property-4">
+    <input type="text" name="jr-property-5">
+    <input type="text" name="jr-property-6">
+    <input type="text" name="jr-property-7">
+    <input type="text" name="jr-property-8">
+    <input type="text" name="jr-property-9">
+    <input type="text" name="jr-property-10">
+  </p>
+
+  <p>Birdo
+    <input type="text" name="birdo-property-1">
+    <input type="text" name="birdo-property-2">
+    <input type="text" name="birdo-property-3">
+    <input type="text" name="birdo-property-4">
+    <input type="text" name="birdo-property-5">
+    <input type="text" name="birdo-property-6">
+    <input type="text" name="birdo-property-7">
+    <input type="text" name="birdo-property-8">
+    <input type="text" name="birdo-property-9">
+    <input type="text" name="birdo-property-10">
+  </p>
+
+<p>Paul
+    <input type="text" name="paul-property-1">
+    <input type="text" name="paul-property-2">
+    <input type="text" name="paul-property-3">
+    <input type="text" name="paul-property-4">
+    <input type="text" name="paul-property-5">
+    <input type="text" name="paul-property-6">
+    <input type="text" name="paul-property-7">
+    <input type="text" name="paul-property-8">
+    <input type="text" name="paul-property-9">
+    <input type="text" name="paul-property-10">
+  </p>
+
+
+
+</div>
 
     <div class="filter-box">
       <a href="#" class="filter-link">Filter</a>
