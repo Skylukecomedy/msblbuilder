@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
- <head>
-   <title>MSBL Character Selector </title>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <style>
+  <head>
+    <title>MSBL Character Selector</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
       /* Position the character names on the left side */
       .character-names {
         position: fixed;
@@ -39,30 +39,30 @@
         text-decoration: none;
         font-weight: bold;
       }
-    
-   </style>
- </head>
- <body>
-   <div class="character-names">
-     <p>Mario</p>
-     <p>Luigi</p>
-     <p>Bowser</p>
-     <p>Peach</p>
-     <p>Rosy</p>
-     <p>Toad</p>
-     <p>Yoshi</p>
-     <p>DK</p>
-     <p>Wario</p>
-     <p>Wali</p>
-     <p>Daisy</p>
-     <p>Shyguy</p>
-     <p>Diddy</p>
-     <p>Jr</p>
-     <p>Birdo</p>
-   </div>
+    </style>
+  </head>
 
-   <div class="filter-box">
-     <a href="#" class="filter-link">Filter</a>
-   </div>
- </body>
+  <body>
+    <div class="character-names">
+      <p>Mario</p>
+      <p>Luigi</p>
+      <p>Bowser</p>
+      <p>Peach</p>
+      <p>Rosy</p>
+      <p>Toad</p>
+      <p>Yoshi</p>
+      <p>DK</p>
+      <p>Wario</p>
+      <p>Wali</p>
+      <p>Daisy</p>
+      <p>Shyguy</p>
+      <p>Diddy</p>
+      <p>Jr</p>
+      <p>Birdo</p>
+    </div>
+
+    <div class="filter-box">
+      <a href="#" class="filter-link">Filter</a>
+    </div>
+  </body>
 </html>
