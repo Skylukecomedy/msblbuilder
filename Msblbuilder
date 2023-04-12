@@ -53,20 +53,16 @@
 
 
 .filter-box {
-  display: inline-block;
-  background-color: #4CAF50;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-.filter-box {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 0;
+  right: 0;
+  margin: 20px;
 }
 
 
 
-}
+
+
 
 .filter-link {
   color: white;
