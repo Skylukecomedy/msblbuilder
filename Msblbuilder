@@ -52,24 +52,22 @@
 
 
 
-.filter-box {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  margin: 20px;
-}
+  .filter-box {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
 
-
-
-
-
-
-.filter-link {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
+  .filter-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
 
       
 
