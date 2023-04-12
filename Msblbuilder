@@ -66,6 +66,8 @@
     <p>Diddy<input type="text" name="diddy-property-1"><input type="text" name="diddy-property-2"></p>
     <p>Jr<input type="text" name="jr-property-1"><input type="text" name="jr-property-2"></p>
     <p>Birdo<input type="text" name="birdo-property-1"><input type="text" name="birdo-property-2"></p>
+    <p>Paul<input type="text" name="paul-property-1"><input type="text" name="paul-property-2"></p>
+
   </div>
 
     <div class="filter-box">
