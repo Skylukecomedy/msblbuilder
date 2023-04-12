@@ -74,10 +74,38 @@
 </head>
 
 <script>
-  function toggleDropdown() {
-    var dropdown = document.getElementsByClassName("dropdown")[0];
-    dropdown.classList.toggle("clicked");
-  }
+ 
+    var dropdown = document.querySelector('.dropdown');
+  var characterSelection = document.querySelector('#character-selection');
+
+  // Add an event listener to the character selection button
+  characterSelection.addEventListener('click', function() {
+    dropdown.classList.toggle('show'); // Toggle the "show" class on the dropdown
+  });
+
+  // Close the dropdown if the user clicks outside of it
+  window.addEventListener('click', function(event) {
+    if (!event.target.matches('#character-selection')) {
+      dropdown.classList.remove('show');
+    }
+  });
+
+// get all the character name links
+		const characterLinks = document.querySelectorAll('.character-name');
+
+		// loop through each character name link
+		characterLinks.forEach(link => {
+			// add a click event listener to each link
+			link.addEventListener('click', (event) => {
+				event.preventDefault(); // prevent the default link behavior
+				const name = event.target.innerText; // get the clicked character name
+				const message = `You have selected ${name}`; // create a message with the selected character name
+				const messageElement = document.createElement('p'); // create a new <p> element
+				messageElement.innerText = message; // set the text content of the <p> element
+				document.body.appendChild(messageElement); // add the <p> element to the bottom of the page
+			});
+		});
+
 </script>
 
 <body>
@@ -103,23 +131,9 @@
 	  </div>
 	</div>
 
-<script>
-		// get all the character name links
-		const characterLinks = document.querySelectorAll('.character-name');
 
-		// loop through each character name link
-		characterLinks.forEach(link => {
-			// add a click event listener to each link
-			link.addEventListener('click', (event) => {
-				event.preventDefault(); // prevent the default link behavior
-				const name = event.target.innerText; // get the clicked character name
-				const message = `You have selected ${name}`; // create a message with the selected character name
-				const messageElement = document.createElement('p'); // create a new <p> element
-				messageElement.innerText = message; // set the text content of the <p> element
-				document.body.appendChild(messageElement); // add the <p> element to the bottom of the page
-			});
-		});
-	</script>
+		
+	
 
 	
 </body>
