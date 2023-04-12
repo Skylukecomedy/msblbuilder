@@ -22,11 +22,11 @@
         cursor: pointer;
       }
 
- /* Style the input boxes */
+/* Style the input boxes */
   .character-names input {
     margin-left: 10px;
-    width: 40px;
-    height: 20px;
+    width: 10px;
+    height: 5px;
   }
 
       /* Style the filter box */
