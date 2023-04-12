@@ -22,7 +22,7 @@
     font-weight: bold;
     cursor: pointer;
   }
-</style>
+
 
 <div class="character-names">
   <p>Mario</p>
