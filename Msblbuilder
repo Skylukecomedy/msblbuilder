@@ -267,13 +267,18 @@
 
 <script>
 
-const marioStats = {
+const characters = [
+{
+
+   name: 'Mario',
+    stats: {
       strength: 11,
       speed: 12,
       shooting: 14,
       passing: 10,
       technique: 16
-    };
+    }
+},
 
 {
     name: 'Luigi',
@@ -336,10 +341,10 @@ const marioStats = {
     }
   },
   {
-    name: 'DK',
+    name: 'Dk',
     stats: {
       strength: 16,
-      speed: 9
+      speed: 9,
       shooting: 13,
       passing: 16,
       technique: 9
@@ -390,7 +395,7 @@ const marioStats = {
     stats: {
       strength: 9,
       speed: 16,
-      shooting: 9
+      shooting: 9,
       passing: 16,
       technique: 13
     }
@@ -414,7 +419,6 @@ const marioStats = {
       passing: 9,
       technique: 17
     }
-  }
 },
 {
     name: 'Paul',
@@ -425,7 +429,7 @@ const marioStats = {
       passing: 9,
       technique: 9
     }
-  };
+  }
 
     // Set the stats values to each character
 characters.forEach(character => {
