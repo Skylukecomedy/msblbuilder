@@ -106,7 +106,9 @@
 
 
 		
-	
+	<div class="filter-box">
+  <a href="#" class="filter-link">Filter</a>
+</div>
 
 	
 </body>
@@ -117,9 +119,6 @@
 
    
    
-<div class="filter-box">
-  <a href="#" class="filter-link">Filter</a>
-</div>
 
 
 
