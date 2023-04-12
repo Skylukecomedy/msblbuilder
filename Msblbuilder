@@ -76,6 +76,16 @@
 </head>
 
 <script>
+
+// Get the 'Mario' link element
+    const marioLink = document.querySelector('.character-name[href="#"]:first-child');
+
+    // Add an event listener for click event
+    marioLink.addEventListener('click', () => {
+      // Remove the 'Mario' link element from the DOM
+      marioLink.remove();
+    });
+
  
     
    
