@@ -262,7 +262,7 @@
 </div>
 
     <div class="filter-box">
-      <a href="#" class="filter-link">Filter</a>
+      <a href="#" class="filter-link" id="filter-button">Filter</a>
     </div>
 
 <script>
@@ -827,6 +827,9 @@ const gear = [
 
 const combinations = [];
 
+
+function generateCombinations() {
+
 for (const head of gear.filter(item => item.type === 'head')) {
   for (const arms of gear.filter(item => item.type === 'arms')) {
     for (const body of gear.filter(item => item.type === 'body')) {
@@ -839,6 +842,9 @@ for (const head of gear.filter(item => item.type === 'head')) {
 
 console.log(combinations);
 
+}
+
+document.getElementById("filter-button").addEventListener("click", generateCombinations);
 
 </script>
   </body>
